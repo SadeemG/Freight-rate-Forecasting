@@ -134,8 +134,9 @@ plt.gcf().autofmt_xdate()
 plt.ylabel("Baltic Dry Index Return")
 plt.legend()
 plt.title("Baltic Dry Index Return Forecast vs Actual")
-plt.show()
 plt.savefig("ARIMA Forecast.png")
+plt.show()
+
 
 # Evaluate the forecast performance using Mean Squared Error
 mse11 = mean_squared_error(test, forecast)
@@ -226,8 +227,9 @@ plt.xlabel('Date')
 plt.ylabel('Baltic Dry Index Return')
 plt.legend()
 plt.title('Baltic Dry Index Return Static Forecast vs Actual (Test Data)')
-plt.show()
 plt.savefig("VECM Forecast.png")
+plt.show()
+
 # Diagnostic tests on the residuals
 residuals = np.array(actuals) - np.array(predictions)
 residuals = residuals.flatten()  # Ensure residuals are one-dimensional
